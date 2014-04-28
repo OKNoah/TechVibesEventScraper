@@ -31,7 +31,7 @@ class Calendar:
 		return calendarString
 
 	def line(self, key, value):
-		return key + ':' + value + '\n'
+		return key + ':' + value + '\r\n'
 
 	def mergeWithFile(self, calendarFile):
 
@@ -59,7 +59,7 @@ class Calendar:
 
 	def googleFormat(self):
 
-		searchResults = re.findall('DESCRIPTION:([\s\S]*?)\nURL:([\s\S]*?)\n',
+		searchResults = re.findall('DESCRIPTION:([\s\S]*?)\r\nURL:([\s\S]*?)\r\n',
 				self.info)
 
 		for description, url in searchResults:
